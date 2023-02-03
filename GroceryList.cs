@@ -50,7 +50,13 @@ class GroceryList
         //  we want to be able to keep track of our grocery trip's cost
 
         // THE MAIN REASON WHY WE ADDED AN INTEGER VARIABLE is because we want to be able display the total price at the end
-        // NOT to display each item's prices..... we can upd
+        // NOT to display each item's prices..... we can update our code later on to do that, that would be 1 foreach function called upon 2 arrays
+        // the first array would be the myGroceryList array(the array that contains strings) and the second array would be the groceryListPrices array(the array housing the price for each grocery)
+        // I would be adding the above update very soon :)
+
+        // AGAIN, we loop through the string array(myGroceryList) to Write to the console each item in our grocery's list
+        // AND WE loop through the int array(groceryListPrices) to tell us that the price for eggs is $1, the price for milt is $6, the price for bread is $2
+        // AND FINALLY our total variable helps us calculate the total Prices of all the items in our grocery List
 
         string[] myGroceryList = {"eggs", "milk", "bread", "bananas", "cereal", "rice", "youghurt"};
 
@@ -68,7 +74,7 @@ class GroceryList
         }
 
         // WE CREATE A NEW int varibale named total and set it to 0. it's important we do this outside the loop, otherwise it will reset to 0 at the beginning of each loop iteration
-        // INSIDE THE LOOP, we update total to equal total + price..... price represents one item in groceryListPrices as the for each loop goes through each item in the array.
+        // INSIDE THE LOOP, we update total to equal total + price.....  the "price" integer variable created represents one item in groceryListPrices as the for each loop goes through each item in the array.
         int total = 0;
 
         foreach(int price in groceryListPrices)

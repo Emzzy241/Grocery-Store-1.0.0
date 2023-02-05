@@ -121,6 +121,10 @@ class GroceryList
         }
 
         // A SUMMARY FOR THE NEW UPDATE(forloop update)
+        // JUst like we did in JavaScript; we instantiated a new index and equated it to 0, 
+        // NOTE: for loops don't always have to start from 0, they can start from any number
+        // and we say our Loop should only stop when we get to myGroceryList.Lenght(Note here the .Length in C# starts with a capital letter, in javascript its .length)
+        // C# methods and properties starts with capital letters and JavaScript's method and Properties startrs with Capital letters
 
 
 

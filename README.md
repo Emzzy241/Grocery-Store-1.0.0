@@ -9,7 +9,7 @@
 * .NET6.0 Framework
 
 ## Description
-_This is a basic C# application where the art of C# looping is Practiced. In this Application, I made use of the famous for each loop that exists in many other Programming Languages like JavaScript.... Although, There is a great difference in the way the C# for each's loop is written and the way the Javascript's for each loop is written._
+_This is a basic C# application where the art of C# looping is Practiced. In this Application, I made use of the famous for each loop and forloop that both exist in many other Programming Languages like JavaScript.... Although, There is a great difference in the way the C# for each's loop is written and the way the Javascript's for each loop is written. The forloop of C# really looks similar to the forloop in JavaScript_
 
 ## Setup/Installation
 * Open your git bash Terminal to Clone the Project with a (git clone _REPOSITORY_NAME_)

@@ -4,7 +4,11 @@ using System.Collections.Generic;
 
 class GroceryList
 {
-    static void Main(){
+    static void Main()
+    {
+
+        /*
+
         // don't forget the Main is an entry point needed for a C# code to run
 
         // YOU SHOULD ALWAYS NOTE: C# arrays would not accept more items in it after it has been created
@@ -15,25 +19,25 @@ class GroceryList
         // back to our application now
 
         // creating an array of string in C# .... with the string[] we told C# we wanted to create a C# string array
-        string[] theEntireArray = {"zero index", "first index", "second index", "third index"};
+        // string[] theEntireArray = { "zero index", "first index", "second index", "third index" };
 
-        // looping through this C# array to print each individual item to the C# console
+        // // looping through this C# array to print each individual item to the C# console
 
-        foreach (string individualItem in theEntireArray)
-        // above we created a string variable that's capable of storing each individual item in itself 
-        // and later on we write each item that has been stored inside this variable(individualItem) to the console
-        {
+        // foreach (string individualItem in theEntireArray)
+        // // above we created a string variable that's capable of storing each individual item in itself 
+        // // and later on we write each item that has been stored inside this variable(individualItem) to the console
+        // {
 
-            Console.WriteLine(individualItem);
-        }
+        //     Console.WriteLine(individualItem);
+        // }
 
-    
-    // let us create another for each loop for our application
+
+        // let us create another for each loop for our application
 
         // string[] myGroceryList = {"eggs", "milk", "bread", "bananas", "cereal", "rice", "youghurt"};
 
         // // we can loop through each item in the myGroceryList like this:
-        
+
         // foreach (string eachGrocery in myGroceryList)
         // {
         //     Console.WriteLine("My Grocery Item: " + eachGrocery);
@@ -58,28 +62,32 @@ class GroceryList
         // AND WE loop through the int array(groceryListPrices) to tell us that the price for eggs is $1, the price for milt is $6, the price for bread is $2
         // AND FINALLY our total variable helps us calculate the total Prices of all the items in our grocery List
 
-        string[] myGroceryList = {"eggs", "milk", "bread", "bananas", "cereal", "rice", "youghurt"};
+        string[] myGroceryList = { "eggs", "milk", "bread", "bananas", "cereal", "rice", "youghurt" };
 
-        
+
         // WE CREATE A SECOND ARRAY int[] groceryListPrices to store the prices of myGroceriesList items
-        int[] groceryListPrices = {3, 6, 4, 2, 4, 4, 2};
+        int[] groceryListPrices = { 3, 6, 4, 2, 4, 4, 2 };
 
         Console.WriteLine("My Grocery List:");
 
         // we can loop through each item in the myGroceryList like this:
-        
-        foreach (string eachGrocery in myGroceryList)
-        {
-            Console.WriteLine("Grocery Item: " + eachGrocery);
-        }
-
-        // WE CREATE A NEW int varibale named total and set it to 0. it's important we do this outside the loop, otherwise it will reset to 0 at the beginning of each loop iteration
-        // INSIDE THE LOOP, we update total to equal total + price.....  the "price" integer variable created represents one item in groceryListPrices as the for each loop goes through each item in the array.
         int total = 0;
 
-        foreach(int price in groceryListPrices)
+        foreach (string eachGrocery in myGroceryList)
         {
-            total = total + price; 
+            Console.WriteLine("Item: " + eachGrocery);
+
+
+        }
+       
+        // WE CREATE A NEW int varibale named total and set it to 0. it's important we do this outside the loop, otherwise it will reset to 0 at the beginning of each loop iteration
+        // INSIDE THE LOOP, we update total to equal total + price.....  the "price" integer variable created represents one item in groceryListPrices as the for each loop goes through each item in the array.
+        // int total = 0;
+            
+
+        foreach (int price in groceryListPrices)
+        {
+            total = total + price;
         }
 
         Console.WriteLine("Your total for this shopping trip will be: $" + total);
@@ -89,8 +97,54 @@ class GroceryList
         // THIS PATTERN WE add to a variable and re-save the new value to that variable is so common that there is an operator
         // just for that: +=.... Hence, total = total + price is the same as total += price. just like in JavaScript
 
-    
 
+
+        */
+
+        // YES, OUR APPLICTION WORKS, our users gets to see the Price of their total grocery item
+        // FOR NOW we didn't show individual grocery item Prices, all we did was to create a list of prices in our code, loop through it and show users the total(only the total, we didn't show users individualPrices), Later On I would be updating this application for that
+
+        // 
+        string[] myGroceryList = { "eggs", "milk", "bread", "bananas", "cereal", "rice", "youghurt" };
+
+
+        // WE CREATE A SECOND ARRAY int[] groceryListPrices to store the prices of myGroceriesList items
+        int[] groceryListPrices = { 3, 6, 4, 2, 4, 4, 2 };
+
+        Console.WriteLine("My Grocery List:");
+
+
+        // REFACTORING THE for each loop here to a forloop
+        for (int index = 0; index < myGroceryList.Length; index++)
+        {
+            Console.WriteLine(myGroceryList[index]);
+        }
+
+        // A SUMMARY FOR THE NEW UPDATE(forloop update)
+
+
+
+
+        // didn't use forloops for our grocery prices, foreach loop was used; for some reasons which I do not know 
+        // the forloop was evaluating my total to $21 instead of $25, hence a foreach loop was used
+
+        // for (int totalIndex = 0; totalIndex < groceryListPrices.Length; totalIndex++)
+        // {
+        //     total = total + totalIndex;
+        // }
+
+        // we can loop through each price in the groceryListPrices like this:
+        int total = 0;
+
+
+        foreach (int price in groceryListPrices)
+        {
+            total = total + price;
+        }
+
+
+
+        Console.WriteLine("Your total for this shopping trip will be: $" + total);
 
     }
 
